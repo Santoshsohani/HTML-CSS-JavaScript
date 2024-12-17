@@ -45,5 +45,44 @@ Here’s why various HTML tags are important for SEO:
 ## Documentation to follow
 [MDN DOCS](https://developer.mozilla.org/en-US/)
 
+## Different color formats
 
+### Hexadecimal
+- It is a 6 character color format
+- Uses base-16 system which lies between 0-9 and A-F
+- #RRGGBB or #RRGGBBAA
+	- R - red
+	- G - green
+	- B - blue
+	- A - alpha (transparency)
+
+### RGB 
+- It uses numbers between 0-255
+- Mixing of colors (RED, GREEN, BLUE) to get the desired color output.
+- example : rgb(255,0,0)
+- There is also another associated format rgba(0,255,128,0.4)
+
+### HSL (Hue, Saturation, Lightness)
+- H - Position on the color wheel (Degree)
+- S - Intensity of the color (Percentage)
+- L - Lightness of the color (Percentage)
+
+`hsl(14, 100%, 60%)` → Orange
+`hsla(240, 100%, 50%, 0.7)` → Blue with 70% transparency
+
+## BDO: Bi-Directional Override
+It is the tag which is used to specify the content to display either from right-left or left-right.
+
+```html
+<bdo dir="ltr">Text content</bdo>
+<bdo dir="rtl">Text content</bdo>
+```
+
+The `<bdo>` tag is supported in all major browsers:
+
+- Chrome
+- Firefox
+- Safari
+- Edge
+- Opera
 
