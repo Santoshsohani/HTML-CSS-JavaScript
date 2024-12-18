@@ -86,3 +86,125 @@ The `<bdo>` tag is supported in all major browsers:
 - Edge
 - Opera
 
+## Anchor Tags
+
+The `target` attribute of the `<a>` (anchor) tag specifies where to open the linked document.  
+There are widely two values used with it:   
+- _self_  
+- _target_
+
+The `_self` value to the attribute opens the linked document in the same tab itself, where as the `_target` opens it in new tab.
+
+```html  
+<a href="https://example.com" target="_self">Same Tab</a>  
+<a href="https://example.com" target="_self">New Tab</a>  
+```
+
+## Address Tag
+
+The `<address>` element is used when the content to be displayed is contact information, address or any other such details is written under the `<address>` tag.  
+
+The `<address>` tag can be nested with the same `<address>` tag but not with the other tags such as `<div> <header>`
+
+```html  
+<address>  
+  You can contact author at  
+<a href="[http://www.example.com/contact">www.example.com</a>.<br](http://www.example.com/contact%22>www.example.com</a>.<br "http://www.example.com/contact%22%3ewww.example.com%3c/a%3e.%3cbr") />  
+  If you see any bugs, please  
+<a href="mailto:webmaster@example.com">contact webmaster</a>.<br />  
+  You may also want to visit us:<br />  
+  Mozilla Foundation<br />  
+  331 E Evelyn Ave<br />  
+  Mountain View, CA 94041<br />  
+  USA  
+</address>  
+```
+
+## Global Attributes
+
+Global attributes are the once which are available to all the elements apart from their individual attributes (if any). Some of the global attributes are :   
+1. class  
+2. id  
+3. style
+
+## Class and Id
+
+In HTML, **class** and **id** attributes are used to uniquely identify and target elements for various operations, such as styling with CSS or manipulating them using JavaScript and the DOM.
+
+### Key Rules and Differences:
+
+1. A single page can have **multiple elements** with the same class name.
+    
+    - Classes are generally used when you need to apply the same styles or functionality to a group of elements.
+2. A single page can have **multiple id attributes**, but each id must be **unique** to one element.
+    
+    - Ids are used to target **specific, unique elements**.
+
+### Why This Distinction Exists:
+
+- The **id** attribute is intended to uniquely identify a single element for precise operations, such as JavaScript manipulation.
+- The **class** attribute is meant for grouping elements to apply common styles or behaviors.
+
+Previously, the JavaScript community decided that using **ids** for targeting single elements was more efficient, as browsers optimize the `getElementById` method for performance. For grouping or shared operations, **classes** are more appropriate.
+
+## iframe
+
+`iframe` is an inline element which is used to embed other html document within another document.
+
+```html
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+</iframe>
+```
+
+### Attributes 
+1. `allow` : It is the attribute which is used to control the permissions for the content present in the `iframe` such as `autoplay payment fullscreen`
+2. `height`
+3. `width`
+4. `loading` : eager (default) or lazy loading
+
+
+## Head 
+
+The `<head>` tag in an HTML page contains meta-information about the page. This includes the title, styling, and other metadata that helps define the page's behavior and appearance.
+
+### Example:
+
+```html
+<meta charset="UTF-8">
+```
+
+- The `charset` attribute specifies the character encoding for the document.
+- **UTF-8** is the most commonly used character encoding because it supports a wide range of characters, including those from multiple languages (like Japanese, Spanish, etc.) and symbols like emojis.
+- **UTF-16** is rarely used in web development today, as UTF-8 is more efficient and widely supported, even for multi-language pages.
+
+---
+
+### Another Example:
+
+```html
+<meta name="" content="">
+```
+
+- This is the **basic syntax** for a `<meta>` tag.
+- The `name` attribute specifies the type of meta-information (e.g., description, viewport).
+- The `content` attribute provides the value for the specified `name`.
+
+---
+
+### Meta Tag for Responsive Design:
+
+One commonly used meta tag adjusts the zoom level and layout based on the device's screen width:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+- **`width=device-width`**: Makes the page width match the device's screen width.
+- **`initial-scale=1.0`**: Sets the initial zoom level to 100%.
+
+This tag ensures your page is mobile-friendly and responsive.
